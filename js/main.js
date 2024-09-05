@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 $(".name").on('input', function (e) {
-  this.value = this.value.replace(/[^a-zA-ZäöüßÄÖÜẞ\s.]/g, '');
+  this.value = this.value.replace(/[^а-яА-ЯёЁ\s.]/g, '');
 });
 $(".phone").on('input', function (e) {
   this.value = "+" + this.value.replace(/[^0-9\.]/g, '');
