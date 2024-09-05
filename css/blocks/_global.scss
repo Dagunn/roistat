@@ -1,0 +1,47 @@
+.container {
+  max-width: 1390px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.section {
+  &-main {
+    margin-top: 40px;
+    position: relative;
+    z-index: 5;
+  }
+
+  @media (width >= 360px) {
+    margin-top: 28px;
+  }
+}
+
+.btn-reg {
+  display: inline-flex;
+  align-items: center;
+  padding: 16px 24px;
+  height: 52px;
+  border-radius: 16px;
+  background-color: #8f8fff;
+  color: inherit;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  border: 1px solid #8f8fff;
+  transition: background-color 0.2s;
+  max-width: 320px;
+  width: 100%;
+
+  @include hover {
+    background-color: #a3a3ff;
+  }
+
+  &:active {
+    background-color: #6464ff;
+  }
+}

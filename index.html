@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://fonts.cdnfonts.com/css/unbounded" rel="stylesheet">
+  <link href="https://db.onlinewebfonts.com/c/88f10bf18a36407ef36bf30bc25a3618?family=SuisseIntl-Regular"
+    rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__box flex justify-between">
+        <a class="logo header__logo" href="/">
+          <img src="img/logo.svg" width="112" height="48" alt="logo">
+        </a>
+
+        <nav class="header__menu hide">
+          <ul class="header__menu-list flex">
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="/">Наши предложения</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="/">Цены</a>
+            </li>
+          </ul>
+        </nav>
+        <img id="burgerMenu" class="header__burger-icon show" src="img/burger.svg" alt="">
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section-main">
+      <div class="container">
+        <div class="main flex justify-between">
+          <div class="main__cont">
+            <div class="line-container line-container--pink">
+              <div class="dot"></div>
+              <div class="line"></div>
+            </div>
+            <div class="main__info">
+              <div class="line-container line-container--blue">
+                <div class="dot"></div>
+                <div class="line line--blue"></div>
+              </div>
+
+              <h1 class="main__title">
+                <span class="main__title--rotated">Черная </span><br> <span class="main__title--red">Пятница</span>
+                <img class="main__sale-logo" src="img/sale.png" alt="">
+
+
+              </h1>
+            </div>
+
+
+
+
+
+
+          </div>
+
+          <svg class="main__star" width="298.751434" height="310.023804" viewBox="0 0 298.751 310.024" fill="none"
+            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs />
+            <path id="path"
+              d="M206.01 174.11L241.4 269.03L167.79 200.58L93.79 303L122.25 180.06L3.68 141.79L114.65 126.14L74.25 7.65L154.17 103.99L218.16 22.09L195.54 132.36L295.29 147.24L206.01 174.11Z"
+              stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="23.966715" />
+          </svg>
+
+        </div>
+
+        <div class="main__benefit flex flex-column">
+          <p class="main__benefit-text">Воспользуйтесь выгодными предложениями от Roistat в ноябре*</p>
+          <button class="btn-reg main__benefit-btn flex justify-between" id="btnReg">Получить выгоду
+            <img src="img/arrow-right.svg" alt="arrow-icon">
+          </button>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- <div class="diagonal-banner">
+      <div class="diagonal-banner__content flex justify-center">
+        <span> 2023 BLACK FRIDAY</span>
+
+
+        <span> 2023 BLACK FRIDAY</span>
+
+
+        <span> 2023 BLACK FRIDAY</span>
+
+
+      </div>
+    </div> -->
+
+
+
+    <section class="section-banner">
+      <div class="banner banner--violet">
+        <div class="banner__marquee marquee left">
+          <p class="banner__text">
+            <span> 2023 BLACK FRIDAY
+
+            </span>
+
+            <span> 2023 BLACK FRIDAY</span>
+            <span> 2023 BLACK FRIDAY</span>
+            <span> 2023 BLACK FRIDAY</span>
+            <span> 2023 BLACK FRIDAY</span>
+            <span> 2023 BLACK FRIDAY</span>
+            <span> 2023 BLACK FRIDAY</span>
+            <span> 2023 BLACK FRIDAY</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="banner banner--yellow">
+        <div class="banner__marquee marquee right">
+          <p class="banner__text">
+            <span> 2023 BLACK FRIDAY</span>
+            <span> 2023 BLACK FRIDAY</span>
+            <span> 2023 BLACK FRIDAY</span>
+            <span> 2023 BLACK FRIDAY</span>
+            <span> 2023 BLACK FRIDAY</span>
+            <span> 2023 BLACK FRIDAY</span>
+            <span> 2023 BLACK FRIDAY</span>
+            <span> 2023 BLACK FRIDAY</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- <div class="banner-sale">
+      <img src="img/banner.png" alt="">
+    </div> -->
+
+
+
+    <div class="overlay" id="overlay"></div>
+    <div class="popup" id="popup">
+      <form action="process_form.php" method="POST" class="form" id="registrationForm">
+        <div class="flex">
+          <h3 class="form__title">Регистрация</h3>
+          <img class="form__close" id="close" src="img/close.svg" alt="close-icon">
+        </div>
+
+        <div class="form__group">
+          <input type="text" name="name" id="name" class="form__input name" placeholder="Имя" autocomplete="off">
+          <span class="form__error" id="nameError">Введите имя</span>
+        </div>
+
+        <div class="form__group">
+          <input type="url" name="site" id="site" class="form__input" placeholder="Сайт компании" autocomplete="off">
+          <span class="form__error" id="siteError">Введите сайт в формате URL</span>
+        </div>
+
+        <div class="form__group">
+          <input type="tel" name="phone" id="phone" class="form__input phone" placeholder="Телефон" minlength="13"
+            maxlength="13" autocomplete="off">
+          <span class="form__error" id="phoneError">Телефон должен быть не менее 12 символов</span>
+        </div>
+
+        <button class="btn-reg form__btn" type="submit">Получить код</button>
+
+        <div class="form__checkbox">
+          <input type="checkbox" id="consentCheckbox" class="form__checkbox-input">
+          <label for="consentCheckbox" class="form__checkbox-label">
+            Отправляя сведения через электронную форму, вы даете согласие на обработку персональных данных, в том числе
+            сбор, хранение и передачу третьим лицам представленной вами информации на условиях <span
+              class="form__policy-text">Политики обработки персональных данных</span>.
+          </label>
+          <span class="form__error form__error-checkbox" id="policyError">Вы должны дать согласие на обработку
+            данных.</span>
+        </div>
+      </form>
+
+
+
+
+
+    </div>
+
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="disclaimer">
+        <p class="disclaimer__text">*Акция не распространяется на подключение опций, лимитов, которые были подключены
+          ранее до 1.11.2023 Количество предложений ограничено</p>
+      </div>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
